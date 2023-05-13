@@ -1,0 +1,3 @@
+DEBUG    Requests:RequestsUtil_cw.py:26 日志-发送post请求
+DEBUG    urllib3.connectionpool:connectionpool.py:1048 Starting new HTTPS connection (1): oa.g107.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:546 https://oa.g107.com:443 "POST /api/department/create HTTP/1.1" 200 None

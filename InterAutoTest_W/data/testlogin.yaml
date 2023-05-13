@@ -1,0 +1,34 @@
+
+#数据驱动有两种形式：
+#1、yaml数据驱动
+
+#登录测试用例
+"case_name": "登录成功用例" #测试用例名称
+"url": "/authorizations/" #url地址
+"data": #data
+  username: "python"
+  password: "12345678"
+"expect": '"username":"python","password":"12345678"' #期望结果
+--- #表示多组数据
+"case_name": "登录失败用例" #测试用例名称
+"url": "/authorizations/" #url地址
+"data": #data
+  username: "test123456"
+  password: "111111"
+"expect": '"username":"python","password":"12345678"' #期望结果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue May 09 22:34:03 CST 2023","Tue May 09 22:34:04 CST 2023","1097","testcase_cw","test1_login_cw","TestExcel","","","login_1组织架构：添加部门","请求URL:https://oa.g107.com/api/department/create
+请求类型:POST
+期望结果:code': 1, 'msg': '提交成功'
+实际结果:{'code': 200, 'body': {'code': 1, 'msg': '提交成功', 'data': {'site_id': 569, 'name': ""['门']1683642843"", 'pid': 0, 'path': ['7946'], 'update_time': '1683642844', 'create_time': '1683642844', 'id': 7946}}}"

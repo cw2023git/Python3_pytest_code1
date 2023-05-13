@@ -1,0 +1,46 @@
+
+#配置文件（日志等级、接口主域名、excel文件名、sheet名）
+
+Base:
+  log_level: "debug" #传入log等级
+  log_extension: ".log" #扩展名
+
+  test:
+    url: "https://oa.g107.com"
+    case_file: "testdata_cw.xls" #excel文件名
+    case_sheet: "功道云-7.0-积分系统" #sheet名
+
+Email:
+  smtpserver: "smtp.163.com"   #SMTP服务器地址
+  username: "selenium2020@163.com"  #当前发送人的用户名
+  password: "wyi202088"  #当前发送人的密码
+  receiver: "wyi202088"  #邮件接收人的用户名（此处可以写自己，也可以写别人）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

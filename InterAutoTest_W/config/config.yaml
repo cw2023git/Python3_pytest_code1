@@ -1,0 +1,46 @@
+
+#配置文件
+
+base:
+  #log等级
+  log_level: "debug"
+  #扩展名
+  log_extension: ".log"
+  test:
+    url: "http://211.103.136.242:8062"
+    case_file: "testdata.xlsx"
+    case_sheet: "美多商城接口测试用例"
+
+email:
+  smtpserver: "smtp.163.com"   #SMTP服务器地址
+  username: "selenium2020@163.com"  #当前发送人的用户名
+  password: "wyi202088"  #当前发送人的密码
+  receiver: "selenium2020@163.com"  #邮件接收人的用户名（此处可以写自己，也可以写别人）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,720 @@
+1、 2、 3、 4、 5、 6、 7、 8、 9、 10、 11、12、13、14、15、16、17、18、19、20、21
+A、 B、 C、 D、 E、 F、 G、 H、 I、  J、 K、 L、 M、 N、 O、 P、 Q、 R、 S、 T、 U
+
+api_num1:
+0 表示不运行
+
+
+绩效考核权限：
+全部权限：
+
+1,2,3,6,7,8,9,10,11,14,15,16
+
+3
+
+
+部分权限：
+1,2,3,6,7,8
+
+
+禁用员工：[49,50,51,52,53,54]
+
+
+python接口测试脚本-执行顺序
+1、test_case_a_data_synchronization_interface.py-数据同步接口（2条、2个接口、71行）
+
+2、test_case_b_configuration_management.py-管理配置（21条、8个接口、149行）
+
+3、test_case_c_indext_library.py-指标（20条、14个接口、233行）
+
+4、test_case_d_assessment_group.py-考评组（11条、7个接口、162行）
+
+5、test_case_e_assessment_package.py-考核包（22条、14个接口、295行）
+
+6、test_case_f_main_process.py-主流程（64条、20个接口、639行）
+
+7、test_case_g_assessment_package_assistance.py-考核包协助（21条、13个接口、226行）
+
+8、test_case_h_assessment_datastatistics.py-数据统计(数据中台)（23条、13个接口、265）
+
+9、test_case_i_import_and_export.py-导入导出（16条、11个接口、244）
+
+构造请求参数（59行）
+
+读取&写入Excel（58行）
+
+主函数（43行）
+
+------------------------------------------------------------------------------------------------------------------------
+钉钉功道云绩效接口自动化测试脚本-相关数据汇总：
+
+整个用时：5.5个星期（编写用时3.5个星期、优化用时2个星期）
+
+运行脚本用时：5分36秒、5分55秒、5分43秒（每个请求延迟了0.5秒，355-100=255秒：4分25秒）
+
+接口(用例)：102个
+
+请求数：200条
+
+代码行数：2044 【2444-400(去掉注释、空格行数)】
+
+环境：2个（测试环境、正式环境）
+
+脚本优化：优化了2轮
+
+
+------------------------------------------------------------------------------------------------------------------------
+测试环境：企业-旺旺队（19个人）    https://dp-test.g107.com
+
+Referer:https://localhost
+
+
+
+正式环境：企业-哇哇队（11个人）    https://app109758.eapps.dingtalkcloud.com
+
+host:    https://app109758.eapps.dingtalkcloud.com
+
+Referer: https://app109758.eapps.dingtalkcloud.com
+
+
+
+主管理员：蔡文(id=263)、方慧毅（id=437）、孙荣高（id=436）【临时】
+
+子管理员：刘俊华（id=265）、招敏诗（id=435）【临时】
+
+主管：刘水线（id=438）
+
+员工(被考核人)：刘俊华（id=262）、刘瑞欣（id=264）、孙茜（id=434）【添加/删除】
+
+
+禁用/开启员工：孙荣举2（id=433）【最后是‘开启’】
+
+
+绩效流程：
+特定指标评分人：刘俊华（id=265）
+
+管理记录人：李杰（id=261）
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+加和计算
+calc_dimension: 0
+calc_type: 1
+
+all_dimension_index_weight: 0
+dimension_weight: "50"
+index: [{id: "389_62031b66d620a", name: "111111", need: 0, type: 1, unit: "1", custom: 1, remark: "11",…},…]
+index_num: 0
+index_type: 1
+name: "量化"
+target_index: 1
+total_weight: 0
+weight_type: 0
+
+加权计算
+calc_dimension: 0
+calc_type: 2
+
+all_dimension_index_weight: 0
+dimension_weight: "50"
+index: [{id: "389_62031b66d620a", name: "111111", need: 0, type: 1, unit: "1", custom: 1, remark: "11",…},…]
+index_num: 0
+index_type: 1
+name: "量化"
+target_index: 1
+total_weight: 0
+weight_type: 0
+
+结论：加和、加权计算、维度权重-关闭，维度内指标总权重数值、维度权重数值、所有维度所有指标总权重等不校验数字
+
+
+
+
+加和计算、维度权重-开启
+calc_dimension: 1
+calc_type: 1
+
+all_dimension_index_weight: 0
+dimension_weight: "50" 【所有维度权重和等于100】
+index: [{id: "389_62031b66d620a", name: "111111", need: 0, type: 1, unit: "1", custom: 1, remark: "11",…},…]
+index_num: 0
+index_type: 1
+name: "量化"
+target_index: 1
+total_weight: 0
+weight_type: 0
+
+
+
+加权计算、维度权重-开启
+calc_dimension: 1
+calc_type: 2
+
+all_dimension_index_weight: 0
+dimension_weight: "50"
+index: [{id: "389_62031b66d620a", name: "111111", need: 0, type: 1, unit: "1", custom: 1, remark: "11",…},…]
+index_num: 0
+index_type: 1
+name: "量化"
+target_index: 1
+total_weight: 0
+weight_type: 0
+
+
+-------------------------------------------------------------------------------------------------------------------------
+考评组：
+维度配置数组列表
+
+量化指标
+
+[
+    {
+        "name": "量化指标A",                 
+        "index_type":1,                    
+        "index_num":0,                     
+        "weight_type":0,                   
+        "all_dimension_index_weight":0, 
+        "dimension_weight":100,                
+        "total_weight":0,                    
+        "target_index":1,                      
+        "index": [                              
+            {
+                "id":"",                        
+                "custom":1,         
+                "type": 1,                       
+                "name": "指标1",           
+                "per_remark": "今天是个下雨天，天气还有点冷",    
+                "remark": "需要注意穿衣保暖，不要冻感冒了",           
+                "target": "100",                
+                "result_type":"none",  
+                "result_employee_id":0,        
+                "unit": "光年",         
+                "weight":50,                  
+                "reviewer_id":0,               
+                "need":0,
+                "enable_ds": 0,
+                "index_level_id": "",
+                "point_limit": 0,
+                "record_ids": []                        
+            }
+        ]
+    },
+非量化指标
+{
+        "name": "非量化指标B",                 
+        "index_type":2,                    
+        "index_num":0,                     
+        "weight_type":0,                   
+        "all_dimension_index_weight":0, 
+        "dimension_weight":0,                
+        "total_weight":0,                    
+        "target_index":1,                      
+        "index": [                              
+            {
+                "id":"",                        
+                "custom":1,         
+                "type":2,                       
+                "name": "指标2",           
+                "per_remark": "明天的天气不知是个什么状况",    
+                "remark": "不管明天的天气是个啥状况，总之，吃饱穿暖就对了",
+                "weight":50,                  
+                "reviewer_id":0,               
+                "need":0,
+                "enable_ds": 0,
+                "index_level_id": "",
+                "point_limit": 0,
+                "record_ids": []         
+            }
+        ]
+    },
+额外加分项
+{
+        "name": "额外加分项C",                 
+        "index_type":3,                    
+        "index_num":0,                     
+        "weight_type":0,                   
+        "all_dimension_index_weight":0, 
+        "dimension_weight":100,                
+        "total_weight":0,                    
+        "target_index":1,                      
+        "index": [                              
+            {
+                "id":"",                        
+                "custom":1,         
+                "type":3,                       
+                "name": "指标3",           
+                "per_remark": "可以预测下后天的天气是个什么状况",    
+                "remark": "预测天气这个事，准确率不是很高，要有心理准备吧",           
+                "target": "",                
+                "result_type":"none",  
+                "result_employee_id":0,        
+                "unit": "",        
+                "weight":0,                  
+                "reviewer_id":0,               
+                "need":0
+                "enable_ds": 0
+                "index_level_id": ""
+                "point_limit":100
+                "record_ids":[]           
+            }
+        ]
+    },
+额外扣分项
+{
+        "name": "额外扣分项D",                 
+        "index_type":4,                    
+        "index_num":0,                     
+        "weight_type":0,                   
+        "all_dimension_index_weight":0, 
+        "dimension_weight":100,                
+        "total_weight":0,                    
+        "target_index":1,                      
+        "index": [                              
+            {
+                "id":"",                        
+                "custom":1,         
+                "type":4,                       
+                "name": "指标4",           
+                "per_remark": "那么大后天的事情要有心理准备和物资准备",    
+                "remark": "未来的事情谁都说不准，多做准备有备无患",           
+                "target": "",                
+                "result_type":"none",  
+                "result_employee_id":0,        
+                "unit": "",        
+                "weight":0,                  
+                "reviewer_id":0,               
+                "need":0
+                "enable_ds": 0
+                "index_level_id": ""
+                "point_limit":100
+                "record_ids":[]           
+            }
+        ]
+    },
+
+]
+
+
+"enable_ds": 0
+"index_level_id": ""
+"point_limit": 0
+"record_ids": []
+
+
+
+
+
+
+
+custom: 1
+enable_ds: 0
+id: "389_62031b66d761a"
+index_level_id: ""
+name: "333"
+need: 0
+per_remark: "33"
+point_limit: 0
+record_ids: []
+remark: ""
+result_employee_id: 2542
+result_type: "special"
+reviewer_id: ""
+target: "3"
+type: 1
+unit: "3"
+weight: "100"
+
+custom: 1
+enable_ds: 0
+id: "389_62109b4eda969"
+index_level_id: ""
+name: "动感地带"
+need: 0
+per_remark: "多个地方似懂非懂是"
+point_limit: 0
+record_ids: []
+remark: "1、非郭德纲打发打发说得对是否跟是否胜多负\n2、的发放给个的很简单过节费给对方是多少分的"
+result_employee_id: 0
+result_type: "none"
+reviewer_id: ""
+target: ""
+type: 2
+unit: ""
+weight: "50"
+
+custom: 1
+enable_ds: 0
+id: "389_6210a2f1dab6d"
+index_level_id: ""
+name: "地方大幅度分非法更换发给回复给对方个的发放给和法国恢复规划法"
+need: 0
+per_remark: "的飞电风扇的"
+point_limit: "100"
+record_ids: []
+remark: "的防火防盗防到底是"
+result_employee_id: 0
+result_type: "none"
+reviewer_id: ""
+target: ""
+type: 3
+unit: ""
+weight: 0
+
+
+custom: 1
+enable_ds: 0
+id: "389_6210a2f1dadda"
+index_level_id: ""
+name: "地方复合分广泛地发"
+need: 0
+per_remark: "东莞的分固定分非官方的发生的"
+point_limit: "100"
+record_ids: []
+remark: "1、分豆腐花放假的费大幅度发的范德萨发\n2、的地方反复付过或多付过多付所多所多所多"
+result_employee_id: 0
+result_type: "none"
+reviewer_id: ""
+target: ""
+type: 4
+unit: ""
+weight: 0
+-------------------------------------------------------------------------------------------------------------------------
+
+流程数组列表【每个字段已一一查验、优化-完整】
+{
+    "type": 1,                        //流程方式 1-按评分人设置流程(默认) 2-按指标设置流程
+    "process_scoring": [            //按评分人设置流程的步骤列表
+        "target",                    //目标制定
+        "confirm",                    //目标确认【应去掉】
+        "execution",                //执行中
+        "score_self",                //自评【应去掉】
+        "score_mutual",                //互评【应去掉】
+        "score_supervisor",            //上级评分
+        "review",                    //审批节点
+        "cc"                        //抄送
+    ],
+    "process_index": [                //按指标设置流程的步骤列表
+        "target",                    //目标制定
+        "confirm",                    //目标确认
+        "execution",                //执行中
+        "score",                    //评分节点
+        "review",                    //审批节点
+        "cc"                         //抄送
+    ],
+    "target": {                        //目标制定配置结果
+        "enable": 1,                //是否启用 1-启用 0-禁用
+        "type": 1,                   //制定者类型 1-系统(默认模板,不可制定目标直接进入下一步) 2-被考核人 3-制定成员 4-主管
+        "action": {                    //可执行动作(允许编辑内容)
+            "result_source": 1,        //结果值数据来源 1-可以 0-不可以
+            "reviewer": 1            //制定评分人 1-可以 0-不可以
+        },
+        "multi_executor": 1,        //执行人多人时处理方式 1-依次制定 2-任一人制定即可
+        "manager_level": 1,            //上级等级
+        "employee_ids": []            //制定成员id列表
+    },
+    "confirm": {                        //目标确认配置结果
+        "enable": 1,                    //是否启用 1-启用 0-禁用
+        "confirmor": [                    //确认人员列表
+            {
+                "type": 1,                //确认人类型 1-主管 2-指定成员 3-被考核人 4-角色
+                "manager_level": 1,        //主管级别
+                "multi_executor": 1,        //确认人多人时处理方式 1-依次确认 2-任一人确认 3-均需确认
+                "action": [                    //允许确认人动作
+                    "index",                //修改指标
+                    "transfer"                //转交
+                ],
+                "employee_ids": [],            //指定成员用户id列表(类型为指定成员时)
+            }
+        ],
+        "unique":0                        //重复去重
+    },
+    "execution": {                //执行中制定配置结果
+        "enable":1                //是否启用 1-启用 0-禁用
+    },
+    "score_self": {                //自评指定配置结果
+        "enable": 0,            //是否启用 1-启用 0-禁用
+        "weight": 0,            //权重
+        "action": [                //必填项动作
+            "comment",            //指标评分说明
+            "summary"            //评分总结
+        ],
+        "rating": 0,            //是否手动评级
+        "unique": 0                //评分人去重
+    },
+    "score_mutual": {            //互评配置结果
+        "enable": 0                //是否启用 1-启用 0-禁用
+    },
+    "score_supervisor": {            //上级评分
+        "enable": 1,                //是否启用 1-启用 0-禁用
+        "unique": 0,                //评分人去重 1-是 0-否
+        "supervisor": [                    //上级配置列表
+            {
+                "type": 1,                //评分人类型 1-主管 2-指定成员 3-角色
+                "manager_level": 1,            //主管等级(只有评分人类型为主管时有效)
+                "supervisor_confirm": 1,        //找不到确认人时是否由上级主管代替(只有评分人类型为主管时有效) 1-是 0-否
+                "role_name": "",            //角色名(只有评分人类型为角色时有效)
+                "employee_ids":[],                //用户id列表(只有评分人类型为指定人员时有效)
+                "weight": 100,                    //权重
+                "multi_executor": 1,            //评分人多人时 1-各自评分 2-任一人评分
+                "rule": 1,                    //评分规则 1-指标均要评分 2-只评总分
+                "action": [                    //必填项
+                    "comment",                //指标评分说明
+                ],
+                "rating": 0,                //是否手动评分 1-是 0-否
+                "transfer": 1                //是否允许转交 1-是 0-否
+            }
+        ]
+    },
+    "special_scorer": {                //指定评分人(只有维度数据中有指定评分人的指标才会有)
+        "enable":0,                    //是否启用 1-启用 0-禁用
+        "action": [                    //必填项
+            "comment",                //指标评分说明
+            "summary"                //评分总结
+        ]
+    },
+    "review": {                                //审批节点
+        "enable": 1,                        //是否启用 1-启用 0-禁用
+        "unique": 0,                        //评分人去重 1-是 0-否
+        "reviewer": [                        //审批人配置列表
+            {
+                "type": 1,                    //用户种类 1-主管 2-指定成员 3-被考核人 4-角色
+                "action": [                    //允许审批人动作
+                    "transfer",                //转交
+                    "refuse"                //驳回
+                ],
+                "manager_level": 1,            //主管级别(只有用户种类为主管有效)
+                "supervisor_confirm": 1,    //找不到审批人时,是否由上级主管代替(只有用户种类为主管有效)
+                "multi_executor": 1,//审批人多人时选项 1-依次确认 2-任一人审批 3-均需审批(用户:主管、指定成员、角色时有效)
+                "employee_ids":[],                //用户id列表(只有用户种类为指定成员时有效)
+                "role_name": ""            //角色名(只有用户种类为角色时有效)
+            }
+        ]
+    },
+    "cc": {                                //抄送配置
+        "enable": 1,                    //是否启用 1-启用 0-禁用
+        "employee": {                    //抄送人员配置
+            "type": 1,                    //抄送人类型 1-主管 2-指定成员 3-角色
+            "manager_level": 1,            //主管等级(只有抄送人类型为主管时有效)
+            "employee_ids":[],            //指定成员id列表(只有抄送人类型为指定成员时有效)
+            "role_name": "",        //角色名称(只有抄送人类型为角色时有效)
+            "condition": 1,                //抄送结果 1-得出总分 2-公示结果
+        }
+    }
+}
+
+-----------------------------------------------------------
+{
+    "type": 1,                        
+    "process_scoring": [            
+        "target",                    
+        "confirm",                    
+        "execution",                
+        "score_self",                
+        "score_mutual",                
+        "score_supervisor",            
+        "review",                    
+        "cc"                       
+    ],
+    "process_index": [                
+        "target",                    
+        "confirm",                  
+        "execution",               
+        "score",                    
+        "review",                   
+        "cc"                         
+    ],
+    "target": {                        
+        "enable": 1,                
+        "type": 1,                   
+        "action": {                    
+            "result_source": 1,       
+            "reviewer": 1           
+        },
+        "multi_executor": 1,        
+        "manager_level": 1,           
+        "employee_ids": []            
+    },
+    "confirm": {                        
+        "enable": 1,                   
+        "confirmor": [                    
+            {
+                "type": 1,                
+                "manager_level": 1,        
+                "multi_executor": 1,        
+                "action": [                   
+                    "index",               
+                    "transfer"               
+                ],
+                "employee_ids": [],            
+            }
+        ],
+        "unique":0                       
+    },
+    "execution": {                
+        "enable": 1                
+    },
+    "score_self": {                
+        "enable": 0,            
+        "weight": 0,            
+        "action": [                
+            "comment",           
+            "summary"           
+        ],
+        "rating": 0,            
+        "unique": 0                
+    },
+    "score_mutual": {            
+        "enable": 0                
+    },
+    "score_supervisor": {            
+        "enable": 1,                
+        "unique": 0,                
+        "supervisor": [                  
+            {
+                "type": 1,                
+                "manager_level": 1,            
+                "supervisor_confirm": 1,        
+                "role_name": "",            
+                "employee_ids":[],               
+                "weight": 100,                    
+                "multi_executor": 1,           
+                "rule": 1,                   
+                "action": [                   
+                    "comment",               
+                ],
+                "rating": 0,                
+                "transfer": 1                
+            }
+        ]
+    },
+    "special_scorer": {               
+        "enable":0,                   
+        "action": [                    
+            "comment",                
+            "summary"               
+        ]
+    },
+    "review": {                               
+        "enable": 1,                       
+        "unique": 0,                        
+        "reviewer": [                       
+            {
+                "type": 1,                    
+                "action": [                  
+                    "transfer",                
+                    "refuse"              
+                ],
+                "manager_level": 1,            
+                "supervisor_confirm": 1,    
+                "multi_executor": 1,
+                "employee_ids":[],              
+                "role_name": ""           
+            }
+        ]
+    },
+    "cc": {                               
+        "enable": 1,                   
+        "employee": {                    
+            "type": 1,                    
+            "manager_level": 1,           
+            "employee_ids":[],            
+            "role_name": "",       
+            "condition": 1        
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+
+考评组设置
+# {"index_score":{"action":["comment","summary"]}}
+
+
+{
+    "index_score": {                    //指标积分配置
+        "action": [                     //必填项
+            "comment",                  //指标评分说明
+            "summary"                   //评分总结
+        ]
+    }
+}
+
+
+请求接口响应的结果问题如下：
+响应的结果: {'code': 0, 'msg': '指标库 不能为空。', 'data': {'list': []}}
+
+{"cc": {"enable": 1, "employee": {"type": 2, "condition": 1, "role_name": "", "employee_ids": [21], "manager_level": 1}}, "type": 1, "review": {"enable": 1, "unique": 0, "reviewer": [{"type": 2, "action": ["transfer", "refuse"], "role_name": "", "employee_ids": [21], "manager_level": 0, "multi_executor": 2, "supervisor_confirm": 0}]}, 
+"target": 
+{"type": 1,
+ "action": 
+   {"reviewer": 1, "result_source": 1},
+ "enable": 1,
+ "employee_ids": [], 
+ "manager_level": 1, 
+ "multi_executor": 2
+   }, "confirm": {"enable": 1, "unique": 0, "confirmor": [{"type": 2, "action": ["index", "transfer"], "employee_ids": [21], "manager_level": 1, "multi_executor": 2}]}, "execution": {"enable": 1}, "score_self": {"action": ["comment", "summary"], "enable": 0, "rating": 1, "unique": 0, "weight": 0}, "score_mutual": {"enable": 0}, "process_index": ["target", "confirm", "execution", "score", "review", "cc"], "special_scorer": {"action": [], "enable": 1}, 
+"process_scoring": [
+           "target", 
+          "execution", 
+          "score_supervisor", 
+          "review", 
+          "cc"
+ ], "score_supervisor": {"enable": 1, "unique": 0, "supervisor": [{"rule": 1, "type": 2, "action": [], "rating": 0, "weight": 100, "transfer": 1, "role_name": "", "employee_ids": [21], "manager_level": 0, "multi_executor": 1, "supervisor_confirm": 0}]}}
+
+
+
+
+问题：
+目前的python接口测试脚本，数据存储在‘Excel’表，但存在明显的弊端：此种存放数据的方式，获取的都不是最新接口响应的数据
+因此会出现一系列超出意外的小问题，但又不影响运行，感觉很糟心
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

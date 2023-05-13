@@ -1,0 +1,5 @@
+2023-05-08 21:48:31,727 F:\Desktop-XX\Python3.7.2-JK-Test\Python-pytest\Python3_pytest_code\python_auto_test_cw\utils_cw\LogUtil_cw.py INFO 报告地址
+2023-05-08 21:52:55,027 F:\Desktop-XX\Python3.7.2-JK-Test\Python-pytest\Python3_pytest_code\python_auto_test_cw\utils_cw\LogUtil_cw.py INFO 报告地址
+2023-05-08 22:05:01,425 F:/Desktop-XX/Python3.7.2-JK-Test/Python-pytest/Python3_pytest_code/python_auto_test_cw/utils_cw/LogUtil_cw.py DEBUG 这是一个debug的测试
+2023-05-08 22:29:39,779 Requests DEBUG 日志-发送post请求
+2023-05-08 22:29:41,077 F:\Desktop-XX\Python3.7.2-JK-Test\Python-pytest\Python3_pytest_code\python_auto_test_cw\utils_cw\LogUtil_cw.py INFO 报告地址

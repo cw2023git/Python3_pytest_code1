@@ -1,0 +1,43 @@
+
+#-----------------------------------数据库基本连接信息-----------------------------------
+
+#编写数据库基本信息
+
+#数据库1
+db_1:
+  db_host: "211.103.136.242"
+  db_user: "test"
+  db_password: "test123456"
+  db_name: "meiduo"
+  db_charset: "utf-8"
+  db_port: "7090"
+
+
+#数据库2
+db_2:
+  db_host: "211.103.136.242"
+  db_user: "test"
+  db_password: "test123456"
+  db_name: "meiduo"
+  db_charset: "utf-8"
+  db_port: "7090"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+#- 一个横线，代表一组数据
+
+-
+# 正例数据
+ name: 获取接口统一鉴权码token接口
+ requests:
+  methond: get
+  url: https://api.weixin.qq.com/cgi-bin/token
+  data:
+    grant_type: client_creadetial
+    appid: wx6b11b3efd1cdc290
+  validate: None
+-
+# 反例数据
+ name: 获取接口统一鉴权码token接口
+ requests:
+  methond: get
+  url: https://api.weixin.qq.com/cgi-bin/token
+  data:
+    grant_type: client_creadetial
+    appid: wx6b11b3efd1cdc290
+  validate: None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
