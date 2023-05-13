@@ -12,6 +12,7 @@ logging.config.fileConfig(log_conf) #加载日志配置表
 logging=logging.getLogger() #log采集对象，生成log
 
 if __name__ == '__main__':
+    print('你好，世界')
     logging.info('---------开始执行钉钉-积分系统-API自动化测试---------')
     #运行方法2：
     report_path = Config_cw.get_report_path() + os.sep + 'result' #拼接目录名称，存放测试结果
